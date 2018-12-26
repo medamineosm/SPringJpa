@@ -11,21 +11,23 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
 
+import javax.annotation.PostConstruct;
+
 @SpringBootApplication
 public class MsUh2cApplication implements CommandLineRunner{
 
 	@Autowired
 	private EtudiantRepository etudiantRepository;
-	
 	@Autowired
 	private FormationRepository formationRepository;
-	
-	
-	
 	@Autowired
 	private RepositoryRestConfiguration repositoryRestConfiguration;
-	
-	
+
+	@PostConstruct
+	private void display(){
+		System.out.println("test");
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(MsUh2cApplication.class, args);
 	}
