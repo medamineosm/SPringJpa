@@ -28,9 +28,6 @@ public class MsUh2cApplication implements CommandLineRunner{
 	
 	public static void main(String[] args) {
 		SpringApplication.run(MsUh2cApplication.class, args);
-		
-		
-		
 	}
 
 	@Override
